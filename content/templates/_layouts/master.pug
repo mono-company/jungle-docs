@@ -1,0 +1,60 @@
+include /templates/_mixins/component-mixins
+
+//- Globally expose mixins without output, needed for prototypes
+include ../../../core/templates/mixins/icon
+include ../../../core/templates/mixins/render-page-tree
+include ../../../core/templates/mixins/sample
+include ../../../core/templates/mixins/styleguide-settings
+include ../../../core/templates/mixins/languages
+
+block pageVariables
+    //- Use this block to append page variables in templates
+    - var projectTitle = "Jungle"
+
+block append styleguideSettings
+    - var styleguideBrandClass = "c-h2"
+    - var styleguideComponentGroupHeaderClass = "c-h2"
+    - var styleguideSampleHeadingClass = "c-h3"
+    - var styleguideComponentListingCategoryClass = "c-h3"
+    - var styleguideRichContentClass = "c-content"
+    - var styleguideNavListTitleClass = "c-h4 u-spacer-top"
+    - var styleguideNavListClass = "c-styleguide-list"
+    - var styleguideNavListItemActiveClass = "c-styleguide-list__item--active"
+    - var styleguideHideBrand = true
+
+doctype html
+html(dir="ltr" lang="nl" class=htmlClass ? htmlClass : '')
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="robots" content="noindex")
+
+        title
+            if pageTitle
+                | #{pageTitle} - 
+            if moduleTitle
+                | #{moduleTitle} - 
+            else
+                | #{projectTitle}
+
+        block styles
+            link(rel='stylesheet', href='/css/main.css')
+            link(rel='stylesheet', href='/css/styleguide.css')
+            link(rel='stylesheet', href='/css/prototype.css')
+
+        //- PLEASE remove this in production!!!
+        meta(name="robots", content="noindex")
+        //- PLEASE remove this in production!!!
+
+    body(class=bodyClass ? bodyClass : '')
+
+        block body
+
+        include ../../../core/templates/includes/prototype-nav
+
+        block modals
+
+        block messageStack
+
+        = "\n"
+        script(src='/js/bundle.js')

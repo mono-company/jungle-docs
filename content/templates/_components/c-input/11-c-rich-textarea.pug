@@ -1,0 +1,17 @@
+.o-form-group-layout.o-form-group-layout--standard
+    .o-form-group
+        label.o-form-group__label Message
+        .o-form-group__controls
+            .c-wysiwyg
+                .c-wysiwyg-toolbar
+                    button.c-button.c-button--small.c-button--borderless.c-button--icon
+                        .c-button__content
+                            +icon('wysiwyg/bold')
+                            .u-sr-accessible Bold
+                    button.c-button.c-button--small.c-button--borderless.c-button--icon
+                        .c-button__content
+                            +icon('wysiwyg/italic')
+                            .u-sr-accessible Italic
+
+                textarea.c-input.c-input--h-large
+                    | I am content

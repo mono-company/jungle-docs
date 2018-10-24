@@ -1,0 +1,8 @@
+.o-form-group
+    label.o-form-group__label(for='emailId')
+        | E-mailadres
+        abbr.required(title="Verplicht veld") *
+    .o-form-group__controls
+        input#emailId.c-input(type="email" value=filled?'sandra.janssens@gmail.com':'')
+    if error
+        .c-form-help-text.c-form-help-text--error Dit is geen geldig e-mailadres.

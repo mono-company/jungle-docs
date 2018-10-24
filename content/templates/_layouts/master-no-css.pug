@@ -1,0 +1,44 @@
+include /templates/_mixins/component-mixins
+
+//- Globally expose mixins without output, needed for prototypes
+include ../../../core/templates/mixins/icon
+include ../../../core/templates/mixins/render-page-tree
+include ../../../core/templates/mixins/sample
+include ../../../core/templates/mixins/styleguide-settings
+include ../../../core/templates/mixins/languages
+
+block pageVariables
+    //- Use this block to append page variables in templates
+    - var projectTitle = "VIAA"
+    - var htmlClass = ""
+    - var bodyClass = ""
+
+doctype html
+html(dir="ltr" lang="en" class=htmlClass ? htmlClass : '')
+    head
+        meta(charset='UTF-8')
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="robots", content="noindex")
+
+        title
+            if pageTitle
+                | #{pageTitle} - 
+            if moduleTitle
+                | #{moduleTitle} - 
+            else
+                | #{projectTitle}
+
+        link(rel='stylesheet', href='/css/prototype.css')
+
+        //- PLEASE remove this in production!!!
+        meta(name="robots", content="noindex")
+        //- PLEASE remove this in production!!!
+
+    body(class=bodyClass ? bodyClass : '')
+
+        block body
+
+        include ../../../core/templates/includes/prototype-nav
+
+        = "\n"
+        script(src='/js/bundle.js')

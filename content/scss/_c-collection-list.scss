@@ -1,0 +1,12 @@
+/* ==========================================================================
+  Component: Collection list
+   ========================================================================== */
+
+.c-collection-list__item {
+  margin-bottom: 3.2rem;
+  padding-bottom: 3.2rem;
+  border-bottom: 1px solid $color-gray-100;
+  &:last-child {
+    border: none;
+  }
+}

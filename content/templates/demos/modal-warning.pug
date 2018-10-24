@@ -1,0 +1,29 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+    - var htmlClass = "u-kill-scroll"
+
+block append modals
+
+    .c-modal-backdrop.c-modal-backdrop--visible
+    .c-modal-context.c-modal-context--visible
+        .c-modal.c-modal--small
+            .c-modal__header
+                .c-toolbar.c-toolbar--spaced
+                    .c-toolbar__left
+                        .c-toolbar__item
+                            h2.c-toolbar__title.c-toolbar__title--medium Warning title
+            .c-modal__body
+                .c-content
+                    p Warning text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod?
+            .c-modal__footer
+                .c-toolbar.c-toolbar--spaced
+                    .c-toolbar__right
+                        .c-toolbar__item
+                            .c-button-toolbar
+                                a.c-button.c-button--default(href="javascript:window.history.back()")
+                                    .c-button__content
+                                        .c-button__label Annuleren
+                                a.c-button.c-button--danger(href="javascript:window.history.back()")
+                                    .c-button__content
+                                        .c-button__label Destructive action

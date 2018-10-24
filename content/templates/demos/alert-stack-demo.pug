@@ -1,0 +1,85 @@
+extends /templates/_layouts/master
+
+block append pageVariables
+
+block body
+    
+    .o-container-vertical
+        .o-container.o-container--small
+            .o-form-group-layout.o-form-group-layout--standard
+
+                .c-h2 Just a form
+
+                .o-form-group-layout.o-form-group-layout--standard
+
+                    .o-form-group.o-form-group--error
+                        label.o-form-group__label(for="nameId") Name
+                        .o-form-group__controls
+                            input.c-input(type="email" value="" id="nameId")
+                            .c-form-help-text.c-form-help-text--error Please enter a name.
+                    .o-form-group.o-form-group--error
+                        label.o-form-group__label(for="emailId") Email address
+                        .o-form-group__controls
+                            input.c-input(type="email" value="user@n@ame.com" id="emailId")
+                            .c-form-help-text.c-form-help-text--error Please enter a valid e-mail address
+
+                    .o-form-group.o-form-group--error
+                        label.o-form-group__label(for="selectId") Preference
+                        .c-select-holder
+                            select.c-select(id="selectId")
+                                option Option A
+                                option Option B
+                                option Option C
+                        .c-form-help-text.c-form-help-text--error Please enter another option. This option is not compatible with what you selected.
+
+                    .o-form-group.o-form-group--error
+                        label.o-form-group__label Value
+                        .o-form-group__controls
+                            .c-radio-group.c-radio-group--inline
+                                .c-radio
+                                    label
+                                        input(type="radio" name="radio12")
+                                        | Inline Value 1
+                                .c-radio
+                                    label
+                                        input(type="radio" name="radio12")
+                                        | Inline Value 2
+                                .c-radio
+                                    label
+                                        input(type="radio" name="radio12" checked)
+                                        | Inline Value 3
+                            .c-form-help-text.c-form-help-text--error Please enter another option. This option is not compatible with what you selected.
+
+                    .o-form-group
+                        input.c-button.c-button--primary(type="submit" value="Save")
+
+
+block append messageStack
+    ul.c-alert-stack
+        li.c-alert.c-alert--dark
+            .c-alert__body
+                .u-spacer-right-s
+                    +icon('multicolor/circle-warning')
+                p Please fix the errors before continuing.
+            button.c-button.c-button--icon.c-button--borderless-i
+                .c-button__content
+                    +icon('close')
+                    .u-sr-accessible Close
+        li.c-alert.c-alert--dark
+            .c-alert__body
+                .u-spacer-right-s
+                    +icon('multicolor/circle-info')
+                p Keep in mind that X should be Y.
+            button.c-button.c-button--icon.c-button--borderless-i
+                .c-button__content
+                    +icon('close')
+                    .u-sr-accessible Close
+        li.c-alert.c-alert--dark
+            .c-alert__body
+                .u-spacer-right-s
+                    +icon('multicolor/circle-check')
+                p Saved successfully.
+            button.c-button.c-button--icon.c-button--borderless-i
+                .c-button__content
+                    +icon('close')
+                    .u-sr-accessible Close

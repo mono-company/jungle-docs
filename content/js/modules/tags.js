@@ -2,7 +2,6 @@
 var tagsInput = require('tags-input');
 
 var myTagInputs = document.querySelectorAll('input[type="tags"]');
-console.log(myTagInputs.length);
 
 // Check for existence
 if (typeof myTagInputs !== "undefined" && myTagInputs !== null) {

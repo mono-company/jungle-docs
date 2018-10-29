@@ -6,7 +6,6 @@
 const dropdownTriggers = document.querySelectorAll('[data-dropdown]');
 const dropdowns = document.querySelectorAll('.c-menu:not(.js-no-action)');
 const dropdownsInDropdowns = document.querySelectorAll('.c-menu .c-menu:not(.js-no-action)');
-
 const bodyElement = document.querySelector('body');
 
 // Global settings

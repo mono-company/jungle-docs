@@ -22,6 +22,10 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
   height: $g-bar-size-regular;
 }
 
+.c-toolbar--medium {
+  height: $g-bar-size-medium;
+}
+
 .c-toolbar--spaced {
   padding: 0 2.4rem;
 }
@@ -35,6 +39,9 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
   justify-content: flex-start;
   .c-toolbar__item {
     margin-right: $c-toolbar-item-spacing;
+    &:only-child {
+      margin: 0;
+    }
   }
 }
 
@@ -43,6 +50,9 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
   justify-content: flex-end;
   .c-toolbar__item {
     margin-left: $c-toolbar-item-spacing;
+    &:only-child {
+      margin: 0;
+    }
   }
 }
 
@@ -70,6 +80,9 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
   align-items: center;
   .c-toolbar__item {
     margin: 0 $c-toolbar-item-spacing/2;
+    &:only-child {
+      margin: 0;
+    }
   }
 }
 
@@ -94,6 +107,9 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
   display: block;
   .o-svg-icon {
     color: $color-gray-700;
+    .c-navbar--inverse & {
+      color: #FFF;
+    }
   }
 }
 
@@ -120,3 +136,25 @@ $c-toolbar-main-border-color: $color-gray-200 !default;
 }
 
 
+/* Drop columns on request
+   ========================================================================== */
+
+@media (max-width: $g-bp2 - 1) {
+
+  .c-toolbar.c-toolbar--drop-columns-low-mq {
+    height: auto;
+    flex-wrap: wrap;
+    .c-toolbar__left,
+    .c-toolbar__right {
+      min-height: $g-bar-size-medium;
+    }
+    .c-toolbar__right {
+      justify-content: flex-start;
+      .c-toolbar__item {
+        margin-left: 0;
+        margin-right: 1.6rem;
+      }
+    }
+  }
+
+}

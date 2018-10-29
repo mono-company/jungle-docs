@@ -85,6 +85,7 @@ textarea.c-input--h-large { height: 20rem; }
 .c-input--code {
   font-family: $g-code-font-family;
   line-height: 2.4rem;
+  font-size: 85%;
 }
 
 /* Input With Icon
@@ -117,7 +118,10 @@ textarea.c-input--h-large { height: 20rem; }
   flex: 1;
 }
 
+/* Input group append
+   ========================================================================== */
+
 .c-input-group__append {
-  height: 4rem;
+  height: 3.6rem;
   margin-left: 1rem;
 }

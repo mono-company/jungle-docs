@@ -1,17 +1,15 @@
 /* ==========================================================================
   c-nav
  ========================================================================== */
-
- .c-navbar {
+.c-header .c-navbar,
+.c-footer .c-navbar {
   height: 100%;
   display: flex;
   align-items: center;
   margin: 0 auto;
-  max-width: 115rem;
-  width: calc(100% - 5.6rem);
+  padding: 0;
+  width: calc(100% - 6.4rem);
 }
-
-
 /* Desktop navigation
    ========================================================================== */
 

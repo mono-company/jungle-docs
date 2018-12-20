@@ -6,31 +6,26 @@ order: 1
 
 .u-spacer-bottom-l
     .c-content
-        h2 Introduction
-        p Welcome to the Jungle Design System.
-        p <strong>What is a design system?</strong> A design system is a set of shared and integrated patterns and principles that define the overall design of a product.
-        p <strong>Why do we need a design system?</strong> To document a design language that can be used as a guideline when creating new screens and apps. We strive for efficiency through well-defined, reusable and cross-platform components.
+        h2 Welcome to the Jungle Design System.
+        p The Jungle design system is a BEM/ITSCSS framework and is a set of shared and integrated patterns and principles that define the overall design of a product.
+        p It exists out of well-defined, reusable and cross-platform components.
 
+        h3 Getting started
+        p There are several ways to install Jungle and you can access all of the files directly on Github.
+        a.c-button.c-button--link(href="")
+            .c-button__label View on Github
+            +icon('arrows/arrow-right')
 
-.u-spacer-top-l.u-spacer-bottom-l
-    h2.c-h2 In this guide
+        .u-spacer-top-l
+            h4 Git clone
+            pre
+                code git clone https://github.com/mono-company/jungle.git
 
-    .u-spacer-bottom-l
-        .c-card
-            .c-card__body
-                .c-content
-                    h3 Basics
-                    p Get to know the basic foundations of the different style elements used.
-                .u-spacer-top
-                    a.c-button.c-button--default(href="/styleguide/docs/colors.html") Colors
-                    a.c-button.c-button--default(href="/styleguide/docs/typography.html") Typography
-                    a.c-button.c-button--default(href="/styleguide/docs/icons.html") Icons
-    .c-card
-        .c-card__body
-            .c-content
-                h3 Design patterns
-                p Descriptions of various design behavior throughout the design system.
-            .u-spacer-top
-                a.c-button.c-button--default(href="/styleguide/docs/forms.html") Forms
-                a.c-button.c-button--default(href="/styleguide/docs/messaging.html") Messaging
-                a.c-button.c-button--default(href="/styleguide/docs/buttons.html") Buttons
+            h4 CDN
+            pre
+                code https//jungle.mono.company/jungledesignsystem.css
+
+            h4 NPM
+            pre
+                code npm install jungle --save
+

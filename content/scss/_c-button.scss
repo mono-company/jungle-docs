@@ -136,6 +136,22 @@ button.c-button {
   text-align: center;
 }
 
+/* Link button
+   ========================================================================== */
+
+.c-button--link {
+  padding-left: 0;
+  padding-right: 0;
+  font-weight: 600;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:hover svg *,
+  &:active svg * {
+    color: darken($color-primary, 15%);
+  }
+}
+
 /* File button
    ---
    Hide an input type file inside a button that is fully clickable

@@ -15,15 +15,6 @@
 @import '_s-variables';
 
 
-/* Jungle docs styling
-   ========================================================================== */
-
-.br-styleguide-content-inner {
-  max-width: 63rem;
-  margin: 0 auto;
-}
-
-
 /* Code button
    We use a separate style to have a subtle button
    ========================================================================== */
@@ -174,5 +165,42 @@
   }
   li.c-styleguide-list__item--active a {
     color: $color-gray-900;
+  }
+}
+
+
+/* Jungle docs styling
+   ========================================================================== */
+
+.br-styleguide-content-inner {
+  max-width: 63rem;
+  margin: 0 auto;
+}
+
+.br-styleguide-default-styles-active .br-styleguide-navigation-holder {
+  padding: 0 !important;
+}
+
+.br-docs-category-name {
+  padding: 1.6rem 4rem;
+  font-weight: 600;
+}
+
+.c-styleguide-list {
+  margin: 0;
+
+  li a {
+    padding: 1.6rem 6.4rem;
+    color: $color-gray-600;
+    &:hover {
+      color: $color-gray-600;
+      background-color: $color-gray-50;
+    }
+  }
+
+  li.c-styleguide-list__item--active a {
+    color: $color-primary;
+    border-left: 4px solid $color-primary;
+    background-color: $color-gray-50;
   }
 }

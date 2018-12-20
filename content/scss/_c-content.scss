@@ -8,6 +8,14 @@
   Usage: use these classes to style individual components like their rich text equivalent
    ========================================================================== */
 
+.c-h1, .c-h2, .c-h3, .c-h4,
+.c-content h1,
+.c-content h2,
+.c-content h3,
+.c-content h4 {
+  color: $g-headings-color;
+}
+
 .c-h1, .c-content h1 {
   font-family: $g-headings-font-family;
   font-weight: $g-headings-font-weight;
@@ -124,11 +132,11 @@
   strong {
     font-weight: $g-headings-font-weight;
   }
-  
+
   a {
     text-decoration: underline;
   }
-  
+
   .c-button {
     text-decoration: none;
   }
@@ -143,7 +151,7 @@
   pre, code {
     font-family: $g-code-font-family;
   }
-  
+
   code {
     font-size: 90%;
   }

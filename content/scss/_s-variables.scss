@@ -7,17 +7,18 @@
 /* Typography
    ========================================================================== */
 
-$g-base-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$g-base-font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 $g-code-font-family: Consolas, 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
-$g-base-font-size: 1.5rem;
+$g-base-font-size: 1.6rem;
 $g-base-line-height: 1.5;
-$g-headings-font-weight: 500;
-$g-headings-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$g-headings-font-weight: 700;
+$g-headings-font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
 /* Colors
    ========================================================================== */
 
 $g-text-color: $color-gray-700;
+$g-headings-color: $color-gray-900;
 $g-base-background: #FFF;
 
 /* Breakpoints
@@ -58,7 +59,7 @@ $g-spacer-unit: 0.8rem;
 $o-form-group-label-font-weight: 500; // Because of Montserrat vs Avenir
 
 
-/* Button overrides 
+/* Button overrides
    ========================================================================== */
 
 $c-button-link-color: $color-brand-blue;

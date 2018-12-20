@@ -31,9 +31,9 @@ html(dir="ltr" lang="nl" class=htmlClass ? htmlClass : '')
 
         title
             if pageTitle
-                | #{pageTitle} - 
+                | #{pageTitle} -
             if moduleTitle
-                | #{moduleTitle} - 
+                | #{moduleTitle} -
             else
                 | #{projectTitle}
 
@@ -47,6 +47,7 @@ html(dir="ltr" lang="nl" class=htmlClass ? htmlClass : '')
         //- PLEASE remove this in production!!!
 
     body(class=bodyClass ? bodyClass : '')
+        include ../_includes/header.pug
 
         block body
 

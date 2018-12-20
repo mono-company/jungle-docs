@@ -15,3 +15,4 @@ require('./modules/tags');
 require('./modules/tooltips');
 require('./modules/wysiwyg');
 require('./modules/drag-drop');
+require('./modules/mobile-navigation');

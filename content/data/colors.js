@@ -58,57 +58,57 @@ let colors = [
   },
   {
     "name": "Gray 900",
-    "code": "0F171D",
+    "code": "0A0E1B",
     "category": "Grays"
   },
   {
     "name": "Gray 800",
-    "code": "1D2B35",
+    "code": "1F1F2B",
     "category": "Grays"
   },
   {
     "name": "Gray 700",
-    "code": "2B414F",
+    "code": "383A46",
     "category": "Grays"
   },
   {
     "name": "Gray 600",
-    "code": "385265",
+    "code": "575A65",
     "category": "Grays"
   },
   {
     "name": "Gray 500",
-    "code": "45647B",
+    "code": "737680",
     "category": "Grays"
   },
   {
     "name": "Gray 400",
-    "code": "557891",
+    "code": "9799A0",
     "category": "Grays"
   },
   {
     "name": "Gray 300",
-    "code": "7894A7",
+    "code": "B4B5BB",
     "category": "Grays"
   },
   {
     "name": "Gray 200",
-    "code": "9CAFBD",
+    "code": "D3D5D8",
     "category": "Grays"
   },
   {
     "name": "Gray 150",
-    "code": "BAC7D1",
+    "code": "DFE0E3",
     "category": "Grays"
   },
   {
     "name": "Gray 100",
-    "code": "D6DEE3",
+    "code": "E5E6EA",
     "category": "Grays"
   },
   {
     "name": "Gray 50",
-    "code": "EDEFF2",
+    "code": "F7F7F9",
     "category": "Grays"
   },
 ];

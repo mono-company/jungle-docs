@@ -2,6 +2,56 @@
 
 let colors = [
   {
+    "name": "Purple",
+    "code": "693ABA",
+    "category": "Primary"
+  },
+  {
+    "name": "Blue",
+    "code": "5295F6",
+    "category": "Primary"
+  },
+  {
+    "name": "Aqua",
+    "code": "7ADEDB",
+    "category": "Primary"
+  },
+  {
+    "name": "Green",
+    "code": "47BF7C",
+    "category": "Primary"
+  },
+  {
+    "name": "Red",
+    "code": "D6203E",
+    "category": "Primary"
+  },
+  {
+    "name": "Orange",
+    "code": "E5A227",
+    "category": "Primary"
+  },
+  {
+    "name": "Yellow",
+    "code": "E0D910",
+    "category": "Primary"
+  },
+  {
+    "name": "Safe Blue",
+    "code": "1F72FB",
+    "category": "Secondary"
+  },
+  {
+    "name": "Safe Blue",
+    "code": "DE3434",
+    "category": "Secondary"
+  },
+  {
+    "name": "Safe Green",
+    "code": "348556",
+    "category": "Secondary"
+  },
+  {
     "name": "Gray 1000",
     "code": "000000",
     "category": "Grays"
@@ -60,71 +110,6 @@ let colors = [
     "name": "Gray 50",
     "code": "EDEFF2",
     "category": "Grays"
-  },
-  {
-    "name": "Brand orange",
-    "code": "F96830",
-    "category": "Primary"
-  },
-  {
-    "name": "Brand blue",
-    "code": "3A586F",
-    "category": "Primary"
-  },
-  {
-    "name": "Midnight blue",
-    "code": "182F42",
-    "category": "Primary"
-  },
-  {
-    "name": "Light grey",
-    "code": "DBDBDB",
-    "category": "Primary"
-  },
-  {
-    "name": "Soft blue",
-    "code": "8AC1CE",
-    "category": "Primary"
-  },
-  {
-    "name": "a11y orange",
-    "code": "D03F06",
-    "category": "Secondary"
-  },
-  {
-    "name": "Ocean green",
-    "code": "57C2A0",
-    "category": "Secondary"
-  },
-  {
-    "name": "Juniper",
-    "code": "678588",
-    "category": "Secondary"
-  },
-  {
-    "name": "Sky blue",
-    "code": "7CAACF",
-    "category": "Secondary"
-  },
-  {
-    "name": "Green 500",
-    "code": "1FC5A0",
-    "category": "Secondary"
-  },
-  {
-    "name": "Green 200",
-    "code": "5AD6BB",
-    "category": "Secondary"
-  },
-  {
-    "name": "Red 500",
-    "code": "FF1744",
-    "category": "Secondary"
-  },
-  {
-    "name": "Red 500",
-    "code": "FF5B7A",
-    "category": "Secondary"
   },
 ];
 

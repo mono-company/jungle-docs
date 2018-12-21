@@ -98,12 +98,12 @@
   display: flex;
   align-items: center;
   padding: 0.8rem 0;
-  .svg-icon, .o-svg-icon, .if {
+  /* .svg-icon, .o-svg-icon, .if {
     flex-basis: 20%;
-  }
+  }*/
   code {
     font-family: $g-base-font-family;
-    flex-basis: 80%;
+    /* flex-basis: 80%; */
     font-size: 1.2rem;
     background: none;
     padding: 0;
@@ -169,7 +169,8 @@
 }
 
 
-/* Jungle docs styling
+/* ==========================================================================
+    Jungle docs styling
    ========================================================================== */
 
 .br-styleguide-content-inner {
@@ -198,9 +199,56 @@
     }
   }
 
-  li.c-styleguide-list__item--active a {
-    color: $color-primary;
+  li.c-styleguide-list__item--active {
     border-left: 4px solid $color-primary;
     background-color: $color-gray-50;
+
+    a {
+      color: $color-primary;
+    }
+  }
+}
+
+/* Styling for icon documentation
+   ========================================================================== */
+
+.c-styleguide-svg-icons {
+  border: 0;
+  padding: 0;
+  margin-bottom: 4rem;
+}
+
+.c-styleguide-svg-icons__category {
+  flex-wrap: wrap;
+  column-count: 4;
+
+}
+
+@media (max-width: 700px) {
+  .c-styleguide-svg-icons__category {
+    column-count: 2;
+  }
+}
+
+.c-styleguide-svg-icon {
+  break-inside: avoid;
+  padding: 0.8rem 0;
+  display: block;
+
+  .c-styleguide-svg-icon__sample {
+    width: 8rem;
+    height: 8rem;
+    background: $color-gray-50;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  code {
+    font-family: $g-base-font-family;
+    font-size: 1.4rem;
+    background: none;
+    padding: 0;
   }
 }

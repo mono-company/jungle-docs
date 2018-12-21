@@ -17,8 +17,10 @@ order: 5
             .c-styleguide-svg-icons__category
                 each icon in category
                     .c-styleguide-svg-icon
-                        +icon(icon.category+'/'+icon.name)
-                        code #{icon.name}
+                        .c-styleguide-svg-icon__sample
+                            +icon(icon.category+'/'+icon.name)
+                        .c-styleguide-svg-icon__code
+                            code #{icon.name}
 
     h2 Bedrock specific
 

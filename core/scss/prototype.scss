@@ -2,6 +2,7 @@
   Bedrock specific styles
    ========================================================================== */
 
+@import "../../content/scss/br-variables-override";
 @import "vendor/codemirror";
 
 /* Variables
@@ -12,8 +13,6 @@ $br-rem-multiplier: 0.625 !default;
 $br-heading-font-weight: 700 !default;
 
 $br-background: #FFF !default;
-$br-color-text: #333 !default;
-$br-color-headings: #000 !default;
 
 $br-default-border-color: #DDD !default;
 $br-default-hover-bg-color: #F0F0F0 !default;
@@ -21,20 +20,23 @@ $br-code-background: $br-default-hover-bg-color !default;
 $br-code-border-color: #DDD !default;
 $br-sample-border-color: $br-default-border-color !default;
 
+$br-styleguide-sidebar-bg-color: #F5F5F5 !default;
+
 $br-switch-breakpoint: 800px;
 
 $br-styleguide-sidebar-width: 22% !default; // Only supply a single % value here
-$br-styleguide-content-width: (100% - $br-styleguide-sidebar-width);
 
-$br-styleguide-sidebar-padding-top: 3.2rem*$br-rem-multiplier !default;
-$br-styleguide-sidebar-padding-right: 3.2rem*$br-rem-multiplier !default;
-$br-styleguide-sidebar-padding-bottom: 3.2rem*$br-rem-multiplier !default;
-$br-styleguide-sidebar-padding-left: 3.2rem*$br-rem-multiplier !default;
+$br-styleguide-sidebar-padding-top: 2.4rem*$br-rem-multiplier !default;
+$br-styleguide-sidebar-padding-right: 2.4rem*$br-rem-multiplier !default;
+$br-styleguide-sidebar-padding-bottom: 2.4rem*$br-rem-multiplier !default;
+$br-styleguide-sidebar-padding-left: 2.4rem*$br-rem-multiplier !default;
 
-$br-styleguide-content-padding-top: 3.2rem*$br-rem-multiplier !default;
-$br-styleguide-content-padding-right: 3.2rem*$br-rem-multiplier !default;
-$br-styleguide-content-padding-bottom: 3.2rem*$br-rem-multiplier !default;
-$br-styleguide-content-padding-left: 3.2rem*$br-rem-multiplier !default;
+$br-styleguide-content-padding-top: 2.4rem*$br-rem-multiplier !default;
+$br-styleguide-content-padding-right: 2.4rem*$br-rem-multiplier !default;
+$br-styleguide-content-padding-bottom: 2.4rem*$br-rem-multiplier !default;
+$br-styleguide-content-padding-left: 4.8rem*$br-rem-multiplier !default;
+
+$br-prototype-nav-width: 250px; // Keep this in px please, otherwise it gets buggy
 
 @import "../../content/scss/br-variables-override";
 
@@ -43,7 +45,7 @@ $br-styleguide-content-padding-left: 3.2rem*$br-rem-multiplier !default;
    ========================================================================== */
 
 .br-styleguide-default-styles-active {
-  
+
   height: 100%;
   position: static !important; // Override any “kill bouncy scroll” type code
   @media (min-width: $br-switch-breakpoint) {
@@ -54,24 +56,10 @@ $br-styleguide-content-padding-left: 3.2rem*$br-rem-multiplier !default;
     height: 100%;
     overflow: visible !important; // Override any utility classes killing scroll
     position: static !important; // Override any “kill bouncy scroll” type code
-    // Only kill the body scroll from a certain mq
-    @media (min-width: $br-switch-breakpoint) {
-      overflow: hidden;
-      position: relative !important;
-    }
-    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-
     background: #FFF;
-  }
-
-  // Default style for 2 column layout in styleguide
-
-  .br-styleguide-container {
-    height: 100%;
-    box-sizing: border-box;
   }
 
   .br-styleguide-navigation-holder {
@@ -81,19 +69,6 @@ $br-styleguide-content-padding-left: 3.2rem*$br-rem-multiplier !default;
       $br-styleguide-sidebar-padding-right
       $br-styleguide-sidebar-padding-bottom
       $br-styleguide-sidebar-padding-left;
-
-    // Only init 2 columns and scroll from a certain mq
-    @media (min-width: $br-switch-breakpoint) {
-      height: 100%;
-      width: $br-styleguide-sidebar-width;
-      float: left;
-      overflow: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-  }
-  
-  .br-styleguide-container-inner {
-    height: 100%;
   }
 
   .br-styleguide-content {
@@ -104,14 +79,6 @@ $br-styleguide-content-padding-left: 3.2rem*$br-rem-multiplier !default;
       $br-styleguide-content-padding-right
       $br-styleguide-content-padding-bottom
       $br-styleguide-content-padding-left;
-    // Only init 2 columns and scroll from a certain mq
-    @media (min-width: $br-switch-breakpoint) {
-      height: 100%;
-      width: $br-styleguide-content-width;
-      float: left;
-      overflow: auto;
-      -webkit-overflow-scrolling: touch;
-    }
   }
 
 }
@@ -119,11 +86,6 @@ $br-styleguide-content-padding-left: 3.2rem*$br-rem-multiplier !default;
 /* ==========================================================================
   br-prototype-nav
    ========================================================================== */
-
-/* Variables
-   ========================================================================== */
-
-$br-prototype-nav-width: 250px; // Keep this in px please, otherwise it gets buggy
 
 /* Sidebar
    ========================================================================== */
@@ -153,7 +115,7 @@ html.br-prototype-nav-is-open {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-
+  text-align: left;
   .br-prototype-nav-inner {
     padding: 2rem*$br-rem-multiplier;
     overflow: hidden;
@@ -171,7 +133,7 @@ html.br-prototype-nav-is-open {
 }
 
 .br-prototype-langselector {
-  margin-bottom: 10px;
+  margin-bottom: 1rem*$br-rem-multiplier;
 }
 
 .br-prototype-nav-text {
@@ -222,7 +184,7 @@ html.br-prototype-nav-is-open {
   font-size: 1.2rem*$br-rem-multiplier;
 }
 
-/* Utilities 
+/* Utilities
    ========================================================================== */
 
 .br-reset-link-styling {
@@ -342,10 +304,16 @@ html.br-prototype-nav-is-open {
   position: relative;
 }
 
+/* Code related
+   ========================================================================== */
+
+.br-sample-code {
+  position: relative;
+}
 .br-sample-copy-code-btn {
   position: absolute;
   z-index: 3;
-  top: 4.5rem*$br-rem-multiplier;
+  top: 1rem*$br-rem-multiplier;
   right: 1rem*$br-rem-multiplier;
   display: none;
   .br-sample-code:hover & {
@@ -358,7 +326,6 @@ html.br-prototype-nav-is-open {
   background: $br-code-background;
   border: 1px solid $br-code-border-color;
   padding: 1rem*$br-rem-multiplier;
-  position: relative;
   .CodeMirror {
     background: transparent;
   }
@@ -372,7 +339,7 @@ html.br-prototype-nav-is-open {
   position: relative;
   overflow-y: hidden;
   overflow-x: scroll;
-  resize: vertical;
+  resize: both;
 }
 
 .br-sample-content-is-layout {
@@ -391,7 +358,6 @@ html.br-prototype-nav-is-open {
   float: left;
   margin: 1rem*$br-rem-multiplier 0;
   padding: 0;
-  color: $br-color-headings;
 }
 
 /* Color swatches
@@ -520,4 +486,124 @@ $br-bordered-list-title-font-size:               1.5rem*$br-rem-multiplier !defa
       background-color: #FFF;
     }
   }
+}
+
+/* Category markers (on components)
+   To use: add “source: unofficial” to YAML front matter in component .md file
+   ========================================================================== */
+
+.br-sample-category {
+  background: #EEE;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 0.2rem 0.8rem;
+  font-size: 90%;
+  margin: 0 0 0 1rem;
+  position: relative;
+  top: 0.7rem;
+}
+
+/* Category markers (in sidebar)
+   Use case: determine which “official” components contain custom code
+   To use: add containsCustom: true to YAML front matter in _docs.md file on component level
+   ========================================================================== */
+
+.br-docs-category-marker-custom {
+  background: #CCC;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  float: right;
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+  Grid layout
+   ========================================================================== */
+
+.br-styleguide-navigation-holder {
+  border-right: 1px solid $br-default-border-color;
+  background: $br-styleguide-sidebar-bg-color;
+  @media (min-width: $br-switch-breakpoint) {
+    overflow: auto;
+  }
+}
+
+.br-styleguide-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background: $br-styleguide-sidebar-bg-color;
+  border-right: 1px solid $br-default-border-color;
+}
+
+.br-styleguide-navigation-holder {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+
+.br-styleguide-search {
+  padding: 1.5rem;
+  background: $br-styleguide-sidebar-bg-color;
+  border-top: 1px solid $br-default-border-color;
+  border-bottom: 1px solid $br-default-border-color;
+  border-right: 1px solid $br-default-border-color;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  input {
+    width: 100%;
+  }
+}
+
+@media (min-width: $br-switch-breakpoint) {
+  .br-styleguide-content {
+    overflow: scroll;
+  }
+}
+
+.br-styleguide-container {
+  height: 100%;
+  display: grid;
+    grid-template-areas:
+           "header"
+           "search"
+           "content"
+           "sidebar";
+
+  @media (min-width: $br-switch-breakpoint) {
+
+    grid-template-columns: $br-styleguide-sidebar-width auto;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+           "header content content"
+           "search content content"
+           "sidebar content content";
+  }
+
+  .br-styleguide-header {
+    grid-area: header;
+  }
+
+  .br-styleguide-search {
+    grid-area: search;
+  }
+
+  .br-styleguide-navigation-holder {
+    grid-area: sidebar;
+  }
+
+  .br-styleguide-content {
+    grid-area: content;
+  }
+}
+
+/* Component group header
+   ========================================================================== */
+
+.br-componentgroup-header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
